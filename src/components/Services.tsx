@@ -6,7 +6,7 @@ export default function Services() {
     {
       icon: Building2,
       title: 'Commercial Cleaning',
-      description: 'Routine cleaning to maintain professional environments — reception areas, common spaces, floors, windows, and surfaces.',
+      description: 'Routine cleaning to maintain professional environments — Airbnb\'s, reception areas, common spaces, floors, windows, and surfaces.',
       features: [
         'Daily or weekly cleaning schedules',
         'Reception and lobby maintenance',
