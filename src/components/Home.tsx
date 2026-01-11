@@ -20,7 +20,7 @@ export default function Home() {
     {
       icon: Building2,
       title: 'Commercial Cleaning',
-      description: 'Professional cleaning for offices, facilities, and commercial spaces.'
+      description: 'Professional cleaning for offices, facilities, Airbnb\'s, and commercial spaces.'
     },
     {
       icon: ShieldCheck,
