@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import {
   ShieldCheck,
   Sparkles,
@@ -16,6 +17,49 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Messy Office',
+      type: 'before'
+    },
+    {
+      image: 'https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Clean Office',
+      type: 'after'
+    },
+    {
+      image: 'https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Messy Dental Office',
+      type: 'before'
+    },
+    {
+      image: 'https://images.pexels.com/photos/3779709/pexels-photo-3779709.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Clean Dental Office',
+      type: 'after'
+    },
+    {
+      image: 'https://images.pexels.com/photos/6069108/pexels-photo-6069108.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Cluttered Workspace',
+      type: 'before'
+    },
+    {
+      image: 'https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Professional Clean Office',
+      type: 'after'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
   const services = [
     {
       icon: Building2,
@@ -131,6 +175,69 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[#7ABB00]" />
                 <span>Eco-Friendly Solutions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
+                See The Difference
+              </h2>
+              <p className="text-lg text-gray-600">
+                From cluttered to pristine - professional cleaning that transforms your space
+              </p>
+            </div>
+
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentSlide ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.label}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
+                    <div className="flex items-center justify-between max-w-4xl mx-auto">
+                      <div>
+                        <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-2 ${
+                          slide.type === 'before'
+                            ? 'bg-red-500 text-white'
+                            : 'bg-[#7ABB00] text-white'
+                        }`}>
+                          {slide.type === 'before' ? 'Before' : 'After'}
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-bold text-white">
+                          {slide.label}
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              <div className="absolute bottom-8 right-8 flex gap-2 z-10">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === currentSlide
+                        ? 'bg-white w-8'
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
