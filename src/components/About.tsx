@@ -111,6 +111,55 @@ export default function About() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-8 text-center">
+              Professional Certification
+            </h2>
+            <p className="text-lg text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+              Our owner is certified by the International Association of Professions Career College as a Cleaning Business Owner, demonstrating our commitment to professional excellence and industry best practices.
+            </p>
+
+            <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="bg-[#7ABB00] w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#1A3D7C] mb-2">
+                    Certified Cleaning Business Owner
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    International Association of Professions Career College • December 2025
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md">
+                <iframe
+                  src="/certification.pdf"
+                  className="w-full h-[600px] border-0"
+                  title="Professional Certification"
+                />
+              </div>
+
+              <div className="mt-6 text-center">
+                <a
+                  href="/certification.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#1A3D7C] hover:text-[#7ABB00] font-semibold transition-colors"
+                >
+                  <Award className="w-5 h-5" />
+                  View Full Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-[#1A3D7C] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
