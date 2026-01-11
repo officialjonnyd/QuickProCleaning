@@ -137,23 +137,11 @@ export default function About() {
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <iframe
-                  src="/certification.pdf"
-                  className="w-full h-[600px] border-0"
-                  title="Professional Certification"
+                <img
+                  src="/certification_bilal_png.png"
+                  alt="Certified Cleaning Business Owner - Bilal El Nazer"
+                  className="w-full h-auto"
                 />
-              </div>
-
-              <div className="mt-6 text-center">
-                <a
-                  href="/certification.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#1A3D7C] hover:text-[#7ABB00] font-semibold transition-colors"
-                >
-                  <Award className="w-5 h-5" />
-                  View Full Certificate
-                </a>
               </div>
             </div>
           </div>
