@@ -18,46 +18,14 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    {
-      image: 'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Cluttered Office Desk',
-      type: 'before'
-    },
-    {
-      image: 'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Clean Modern Office',
-      type: 'after'
-    },
-    {
-      image: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Messy Conference Room',
-      type: 'before'
-    },
-    {
-      image: 'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Professional Board Room',
-      type: 'after'
-    },
-    {
-      image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Untidy Dental Office',
-      type: 'before'
-    },
-    {
-      image: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Pristine Dental Office',
-      type: 'after'
-    },
-    {
-      image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Disorganized Workspace',
-      type: 'before'
-    },
-    {
-      image: 'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Clean Corporate Office',
-      type: 'after'
-    }
+    'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1920'
   ];
 
   useEffect(() => {
@@ -189,7 +157,7 @@ export default function Home() {
             </div>
 
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              {slides.map((slide, index) => (
+              {slides.map((image, index) => (
                 <div
                   key={index}
                   className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -197,26 +165,10 @@ export default function Home() {
                   }`}
                 >
                   <img
-                    src={slide.image}
-                    alt={slide.label}
+                    src={image}
+                    alt="Commercial cleaning showcase"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
-                    <div className="flex items-center justify-between max-w-4xl mx-auto">
-                      <div>
-                        <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-2 ${
-                          slide.type === 'before'
-                            ? 'bg-red-500 text-white'
-                            : 'bg-[#7ABB00] text-white'
-                        }`}>
-                          {slide.type === 'before' ? 'Before' : 'After'}
-                        </div>
-                        <h3 className="text-2xl md:text-3xl font-bold text-white">
-                          {slide.label}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               ))}
 
