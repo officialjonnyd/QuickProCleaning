@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
   ShieldCheck,
-  Sparkles,
   Building2,
   HeartPulse,
   Briefcase,
@@ -10,7 +9,6 @@ import {
   Car,
   ArrowRight,
   CheckCircle2,
-  Star,
   Leaf,
   Clock,
   Award
@@ -21,33 +19,43 @@ export default function Home() {
 
   const slides = [
     {
-      image: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Messy Office',
+      image: 'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Cluttered Office Desk',
       type: 'before'
     },
     {
-      image: 'https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Clean Office',
+      image: 'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Clean Modern Office',
       type: 'after'
     },
     {
-      image: 'https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Messy Dental Office',
+      image: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Messy Conference Room',
       type: 'before'
     },
     {
-      image: 'https://images.pexels.com/photos/3779709/pexels-photo-3779709.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Clean Dental Office',
+      image: 'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Professional Board Room',
       type: 'after'
     },
     {
-      image: 'https://images.pexels.com/photos/6069108/pexels-photo-6069108.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Cluttered Workspace',
+      image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Untidy Dental Office',
       type: 'before'
     },
     {
-      image: 'https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&w=1920',
-      label: 'Professional Clean Office',
+      image: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Pristine Dental Office',
+      type: 'after'
+    },
+    {
+      image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Disorganized Workspace',
+      type: 'before'
+    },
+    {
+      image: 'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1920',
+      label: 'Clean Corporate Office',
       type: 'after'
     }
   ];
@@ -90,19 +98,6 @@ export default function Home() {
       icon: Car,
       title: 'Dealership & Showroom',
       description: 'Showroom floor care to help your inventory shine.'
-    }
-  ];
-
-  const testimonials = [
-    {
-      text: "QuickPro's certified sanitation keeps our clinic safe and spotless.",
-      author: "Dr. L.",
-      role: "Medical Clinic"
-    },
-    {
-      text: "Professional, reliable & detail-oriented.",
-      author: "J. McAllister",
-      role: "Bank Manager"
     }
   ];
 
@@ -326,41 +321,6 @@ export default function Home() {
               View All Services
               <ArrowRight className="w-5 h-5" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-br from-[#1A3D7C] to-[#2a5294] text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg text-gray-200">
-              Trusted by professionals across industries
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#7ABB00] text-[#7ABB00]" />
-                  ))}
-                </div>
-                <p className="text-lg mb-4 italic">"{testimonial.text}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#7ABB00] rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    {testimonial.author[0]}
-                  </div>
-                  <div>
-                    <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-sm text-gray-300">{testimonial.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
