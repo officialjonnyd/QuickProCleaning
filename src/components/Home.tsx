@@ -103,7 +103,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-              Certified sanitation and disinfection services backed by professional commercial cleaning designed for medical clinics, dental clinics, offices, banks, vehicle dealerships & more.
+              Certified sanitation and disinfection services backed by professional commercial cleaning designed for medical clinics, dental clinics, offices, banks, move-in-and out cleaning, vehicle dealerships & more.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
