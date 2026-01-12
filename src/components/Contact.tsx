@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, Send, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,20 +13,54 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({
-      businessName: '',
-      contactName: '',
-      email: '',
-      phone: '',
-      facilityType: '',
-      serviceNeeded: '',
-      comments: ''
-    });
+    setLoading(true);
+    setError('');
+
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      if (!supabaseUrl || !supabaseAnonKey) {
+        throw new Error('Missing Supabase configuration');
+      }
+
+      const response = await fetch(`${supabaseUrl}/functions/v1/send-quote-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Failed to send quote request');
+      }
+
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 5000);
+      setFormData({
+        businessName: '',
+        contactName: '',
+        email: '',
+        phone: '',
+        facilityType: '',
+        serviceNeeded: '',
+        comments: ''
+      });
+    } catch (err) {
+      console.error('Error submitting quote request:', err);
+      setError(err instanceof Error ? err.message : 'Failed to send quote request. Please try again or call us directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -141,6 +175,16 @@ export default function Contact() {
                   <div className="bg-green-50 border border-green-200 text-green-800 p-4 rounded-lg mb-6">
                     <p className="font-semibold">Thank you for your inquiry!</p>
                     <p className="text-sm">We'll get back to you within 24 hours.</p>
+                  </div>
+                )}
+
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg mb-6 flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold">Error</p>
+                      <p className="text-sm">{error}</p>
+                    </div>
                   </div>
                 )}
 
@@ -273,10 +317,20 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#7ABB00] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#6aa900] transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                    disabled={loading}
+                    className="w-full bg-[#7ABB00] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#6aa900] transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-5 h-5" />
-                    Send Me a Quote
+                    {loading ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Me a Quote
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
