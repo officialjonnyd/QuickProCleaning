@@ -121,9 +121,10 @@ export default function Contact() {
                         <Clock className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[#1A3D7C] mb-1">Hours</h3>
-                        <p className="text-gray-700">Monday–Friday</p>
-                        <p className="text-gray-700">9am–9pm</p>
+                        <h3 className="font-semibold text-[#1A3D7C] mb-1">Business Hours</h3>
+                        <p className="text-gray-700">Mon–Sun: 8:00 AM – 10:00 PM</p>
+                        <p className="text-gray-700 text-sm mt-1">Emergency Cleaning: 24/7</p>
+                        <p className="text-gray-600 text-xs">(By Appointment)</p>
                       </div>
                     </div>
                   </div>
