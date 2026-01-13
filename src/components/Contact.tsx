@@ -22,18 +22,10 @@ export default function Contact() {
     setError('');
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-      if (!supabaseUrl || !supabaseAnonKey) {
-        throw new Error('Missing Supabase configuration');
-      }
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-quote-email`, {
+      const response = await fetch('/.netlify/functions/send-quote-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${supabaseAnonKey}`,
         },
         body: JSON.stringify(formData),
       });
