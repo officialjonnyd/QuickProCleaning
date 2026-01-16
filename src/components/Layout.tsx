@@ -4,19 +4,17 @@ import { useState, useEffect } from 'react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY < 50) {
-        setIsHeaderVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        setIsHeaderVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsHeaderVisible(true);
+      if (currentScrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
       }
 
       setLastScrollY(currentScrollY);
@@ -35,16 +33,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <header
         className={`glass-white text-gray-900 sticky top-0 z-50 shadow-xl transition-all duration-300 ${
-          isHeaderVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+          isScrolled ? 'mx-4 mt-4 rounded-2xl' : ''
         }`}
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className={`container mx-auto px-6 transition-all duration-300 ${
+          isScrolled ? 'py-2' : 'py-4'
+        }`}>
           <div className="flex items-center justify-between gap-8">
             <Link to="/" className="flex items-center group flex-shrink-0">
               <img
                 src="/reliable_commercial_cleaning_you_can_trust.png"
                 alt="QuickPro Cleaning Solutions Ltd"
-                className="h-28 w-auto transition-transform group-hover:scale-105 -my-6"
+                className={`w-auto transition-all duration-300 group-hover:scale-105 ${
+                  isScrolled ? 'h-16 -my-2' : 'h-28 -my-6'
+                }`}
                 style={{ objectFit: 'contain' }}
               />
             </Link>
