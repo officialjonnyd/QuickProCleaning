@@ -22,8 +22,25 @@ export default function Pricing() {
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-[#1A3D7C] to-[#2a5294] text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg"
+            alt="Professional pricing and planning"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Blue Gradient Overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, rgba(26, 61, 124, 0.95) 0%, rgba(26, 61, 124, 0.85) 50%, rgba(26, 61, 124, 0.75) 100%)'
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <DollarSign className="w-16 h-16 mb-6 opacity-90 mx-auto" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">

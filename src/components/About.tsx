@@ -17,8 +17,12 @@ export default function About() {
       </section>
 
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30 pointer-events-none">
-          <spline-viewer url="https://prod.spline.design/AOLNbsmK0NvCAlot/scene.splinecode"></spline-viewer>
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <img
+            src="https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg"
+            alt="Professional cleaning team"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
