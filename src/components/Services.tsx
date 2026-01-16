@@ -95,7 +95,7 @@ export default function Services() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/5de5f668-9c2a-49d6-8e07-02e85db7b74d.png"
+            src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg"
             alt="Professional cleaning services"
             className="w-full h-full object-cover"
           />
