@@ -18,14 +18,10 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/4246119/pexels-photo-4246119.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/7414910/pexels-photo-7414910.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/4107278/pexels-photo-4107278.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1920'
+    '/5de5f668-9c2a-49d6-8e07-02e85db7b74d.png',
+    '/8d3ce9ba-c558-43e2-8b59-fbda44fcceeb.png',
+    '/78e57bf0-d9f5-4985-bd60-3c5a34744dc5.png',
+    '/e67c4573-d61f-4846-9275-2c1fc00d95a4.png'
   ];
 
   useEffect(() => {
