@@ -22,16 +22,34 @@ export default function Pricing() {
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-[#1A3D7C] to-[#2a5294] text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <DollarSign className="w-16 h-16 mx-auto mb-6 opacity-90" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Transparent Pricing
-            </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Custom quotes tailored to your facility's unique needs
-            </p>
+      <section className="bg-gradient-to-br from-[#1A3D7C] to-[#2a5294] text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img
+            src="https://images.pexels.com/photos/4099470/pexels-photo-4099470.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Cleaning checklist background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-center md:text-left">
+                <DollarSign className="w-16 h-16 mb-6 opacity-90 mx-auto md:mx-0" />
+                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                  Transparent Pricing
+                </h1>
+                <p className="text-xl text-gray-200 leading-relaxed">
+                  Custom quotes tailored to your facility's unique needs
+                </p>
+              </div>
+              <div className="hidden md:block">
+                <img
+                  src="https://images.pexels.com/photos/4099470/pexels-photo-4099470.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Professional cleaning checklist and supplies"
+                  className="rounded-2xl shadow-2xl border-4 border-white/20"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
