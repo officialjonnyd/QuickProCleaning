@@ -91,8 +91,25 @@ export default function Services() {
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-[#1A3D7C] to-[#2a5294] text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/5de5f668-9c2a-49d6-8e07-02e85db7b74d.png"
+            alt="Professional cleaning services"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Blue Gradient Overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, rgba(26, 61, 124, 0.95) 0%, rgba(26, 61, 124, 0.85) 50%, rgba(26, 61, 124, 0.75) 100%)'
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Our Services
