@@ -1,11 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Mail, Clock, Sparkles } from 'lucide-react';
+import { Phone, Mail, Clock, Sparkles, X, Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollY]);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -113,12 +118,102 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </div>
 
-            <button className="lg:hidden text-gray-700 hover:text-[#7ABB00] transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden text-gray-700 hover:text-[#7ABB00] transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
+
+          {/* Mobile Menu Dropdown */}
+          {isMobileMenuOpen && (
+            <div className="lg:hidden border-t border-gray-200 mt-4">
+              <nav className="py-4">
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      to="/"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-colors ${
+                        isActive('/')
+                          ? 'bg-[#7ABB00]/10 text-[#7ABB00] font-semibold'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-colors ${
+                        isActive('/services')
+                          ? 'bg-[#7ABB00]/10 text-[#7ABB00] font-semibold'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      Commercial Cleaning
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-colors ${
+                        isActive('/about')
+                          ? 'bg-[#7ABB00]/10 text-[#7ABB00] font-semibold'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/pricing"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-colors ${
+                        isActive('/pricing')
+                          ? 'bg-[#7ABB00]/10 text-[#7ABB00] font-semibold'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+                </ul>
+
+                <div className="mt-6 px-4 space-y-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <Phone className="w-4 h-4" />
+                    <a href="tel:7802788231" className="hover:text-[#7ABB00] transition-colors">
+                      (780) 278-8231
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <Mail className="w-4 h-4" />
+                    <a href="mailto:quickpro2025@gmail.com" className="hover:text-[#7ABB00] transition-colors break-all">
+                      quickpro2025@gmail.com
+                    </a>
+                  </div>
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-center glass-green text-[#7ABB00] font-bold px-6 py-3 rounded-lg hover:bg-[#7ABB00] hover:text-white transition-all shadow-lg"
+                  >
+                    Get a Quote
+                  </Link>
+                </div>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
