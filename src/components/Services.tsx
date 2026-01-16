@@ -121,8 +121,20 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg"
+            alt="Cleaning supplies background"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+
+        {/* Light overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/95 via-white/90 to-blue-50/95" />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto space-y-12">
             {services.map((service, index) => (
               <div
