@@ -26,8 +26,8 @@ export default function Pricing() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg"
-            alt="Professional pricing and planning"
+            src="https://images.pexels.com/photos/2451645/pexels-photo-2451645.jpeg"
+            alt="Clean professional boardroom"
             className="w-full h-full object-cover"
           />
         </div>
