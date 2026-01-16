@@ -104,30 +104,30 @@ export default function Home() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-[#7ABB00] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-2 glass-green text-[#7ABB00] font-bold px-4 py-2 rounded-full text-sm mb-6 shadow-lg">
               <Award className="w-4 h-4" />
               CERTIFIED & RELIABLE
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-2xl">
               Professional Commercial Cleaning & <span className="text-[#7ABB00]">Sanitation Services</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
               Certified sanitation and disinfection services backed by professional commercial cleaning designed for medical clinics, dental clinics, offices, banks, move-in-and out cleaning, vehicle dealerships & more.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-[#7ABB00] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#6aa900] transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="glass-green text-[#7ABB00] font-bold px-8 py-4 rounded-xl hover:bg-[#7ABB00] hover:text-white transition-all shadow-2xl hover:shadow-[#7ABB00]/50 flex items-center justify-center gap-2 border-2 border-[#7ABB00]/30"
               >
                 Get Your Free Quote
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="bg-white text-[#1A3D7C] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
+                className="glass-white text-[#1A3D7C] px-8 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-2xl hover:shadow-white/30"
               >
                 Learn More
               </Link>
@@ -167,29 +167,29 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center p-6">
-              <div className="bg-[#7ABB00]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ShieldCheck className="w-8 h-8 text-[#7ABB00]" />
               </div>
               <h3 className="font-semibold text-[#1A3D7C] mb-2">Certified</h3>
               <p className="text-sm text-gray-600">Professional protocols</p>
             </div>
-            <div className="text-center p-6">
-              <div className="bg-[#7ABB00]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-[#7ABB00]" />
               </div>
               <h3 className="font-semibold text-[#1A3D7C] mb-2">Flexible</h3>
               <p className="text-sm text-gray-600">Scheduling available</p>
             </div>
-            <div className="text-center p-6">
-              <div className="bg-[#7ABB00]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Leaf className="w-8 h-8 text-[#7ABB00]" />
               </div>
               <h3 className="font-semibold text-[#1A3D7C] mb-2">Eco-Friendly</h3>
               <p className="text-sm text-gray-600">Safe products</p>
             </div>
-            <div className="text-center p-6">
-              <div className="bg-[#7ABB00]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-[#7ABB00]" />
               </div>
               <h3 className="font-semibold text-[#1A3D7C] mb-2">Trusted</h3>
@@ -214,15 +214,15 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-[#7ABB00] group"
+                className="glass-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:border-[#7ABB00] group"
               >
-                <div className="bg-[#1A3D7C] w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#7ABB00] transition-colors">
+                <div className="glass-dark w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#7ABB00] transition-all shadow-lg">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#1A3D7C] mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   {service.description}
                 </p>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-[#1A3D7C] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#7ABB00] transition-all"
+              className="inline-flex items-center gap-2 glass-dark text-white px-6 py-3 rounded-xl font-bold hover:bg-[#7ABB00] transition-all shadow-xl"
             >
               View All Services
               <ArrowRight className="w-5 h-5" />

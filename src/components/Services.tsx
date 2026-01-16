@@ -127,20 +127,20 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow"
+                className="glass-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-[#7ABB00]/20 transition-all border-2 border-white/30"
               >
                 <div className="grid md:grid-cols-3 gap-0">
                   <div className={`bg-gradient-to-br ${service.color} p-8 md:p-10 text-white flex flex-col justify-center items-center text-center`}>
-                    <div className="bg-white/20 backdrop-blur-sm w-20 h-20 rounded-2xl flex items-center justify-center mb-4">
+                    <div className="glass backdrop-blur-lg w-20 h-20 rounded-2xl flex items-center justify-center mb-4 shadow-xl">
                       <service.icon className="w-10 h-10" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold">
+                    <h3 className="text-2xl md:text-3xl font-bold drop-shadow-lg">
                       {service.title}
                     </h3>
                   </div>
 
                   <div className="md:col-span-2 p-8 md:p-10">
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    <p className="text-lg text-gray-800 mb-6 leading-relaxed font-medium">
                       {service.description}
                     </p>
 
@@ -175,13 +175,13 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-[#7ABB00] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-lg inline-block"
+              className="glass-white text-[#7ABB00] font-bold px-8 py-4 rounded-xl hover:bg-white transition-all shadow-2xl inline-block border-2 border-white/30"
             >
               Get Your Free Quote
             </Link>
             <Link
               to="/pricing"
-              className="bg-[#1A3D7C] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#2a5294] transition-all shadow-lg inline-block"
+              className="glass-dark text-white px-8 py-4 rounded-xl font-bold hover:bg-[#2a5294] transition-all shadow-2xl inline-block"
             >
               View Pricing Guide
             </Link>

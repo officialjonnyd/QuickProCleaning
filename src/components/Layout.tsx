@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header
-        className={`bg-white text-gray-900 sticky top-0 z-50 shadow-md transition-all duration-300 ${
+        className={`glass-white text-gray-900 sticky top-0 z-50 shadow-xl transition-all duration-300 ${
           isHeaderVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
         }`}
       >
@@ -105,7 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <Link
                 to="/contact"
-                className="bg-[#7ABB00] text-white px-6 py-2.5 rounded-md font-medium hover:bg-[#6aa300] transition-colors shadow-sm"
+                className="glass-green text-[#7ABB00] font-bold px-6 py-2.5 rounded-md hover:bg-[#7ABB00] hover:text-white transition-all shadow-lg"
               >
                 Get a Quote
               </Link>

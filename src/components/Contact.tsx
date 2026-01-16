@@ -87,24 +87,24 @@ export default function Contact() {
                 </h2>
 
                 <div className="space-y-4">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="glass-white p-6 rounded-2xl shadow-xl">
                     <div className="flex items-start gap-4">
-                      <div className="bg-[#7ABB00] p-3 rounded-lg">
-                        <Phone className="w-6 h-6 text-white" />
+                      <div className="glass-green p-3 rounded-xl shadow-lg">
+                        <Phone className="w-6 h-6 text-[#7ABB00]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-[#1A3D7C] mb-1">Phone</h3>
-                        <a href="tel:7802788231" className="text-gray-700 hover:text-[#7ABB00] transition-colors text-lg">
+                        <a href="tel:7802788231" className="text-gray-700 hover:text-[#7ABB00] transition-colors text-lg font-medium">
                           780 278 8231
                         </a>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="glass-white p-6 rounded-2xl shadow-xl">
                     <div className="flex items-start gap-4">
-                      <div className="bg-[#7ABB00] p-3 rounded-lg">
-                        <Mail className="w-6 h-6 text-white" />
+                      <div className="glass-green p-3 rounded-xl shadow-lg">
+                        <Mail className="w-6 h-6 text-[#7ABB00]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-[#1A3D7C] mb-1">Email</h3>
@@ -115,10 +115,10 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="glass-white p-6 rounded-2xl shadow-xl">
                     <div className="flex items-start gap-4">
-                      <div className="bg-[#7ABB00] p-3 rounded-lg">
-                        <Clock className="w-6 h-6 text-white" />
+                      <div className="glass-green p-3 rounded-xl shadow-lg">
+                        <Clock className="w-6 h-6 text-[#7ABB00]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-[#1A3D7C] mb-1">Business Hours</h3>
@@ -131,9 +131,9 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-[#1A3D7C] text-white p-6 rounded-xl">
+              <div className="glass-dark text-white p-6 rounded-2xl shadow-2xl">
                 <h3 className="font-bold text-lg mb-3">Why Choose QuickPro?</h3>
-                <ul className="space-y-2 text-sm text-gray-200">
+                <ul className="space-y-2 text-sm text-white/90">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-[#7ABB00] rounded-full"></div>
                     Certified sanitation specialists
@@ -159,7 +159,7 @@ export default function Contact() {
             </div>
 
             <div className="md:col-span-3">
-              <div className="bg-white p-8 rounded-xl shadow-xl">
+              <div className="glass-white p-8 rounded-2xl shadow-2xl border-2 border-white/30">
                 <h2 className="text-2xl font-bold text-[#1A3D7C] mb-6">
                   Request a Quote
                 </h2>
@@ -311,7 +311,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-[#7ABB00] text-white py-4 rounded-lg font-semibold text-lg hover:bg-[#6aa900] transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                    className="w-full glass-green border-2 border-[#7ABB00]/50 text-[#7ABB00] font-bold py-4 rounded-xl hover:bg-[#7ABB00] hover:text-white transition-all shadow-2xl hover:shadow-[#7ABB00]/50 flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>
