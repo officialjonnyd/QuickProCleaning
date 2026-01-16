@@ -16,8 +16,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30 pointer-events-none">
+          <spline-viewer url="https://prod.spline.design/AOLNbsmK0NvCAlot/scene.splinecode"></spline-viewer>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-6">
