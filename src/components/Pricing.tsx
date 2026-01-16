@@ -79,7 +79,7 @@ export default function Pricing() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="glass-dark text-white p-12 md:p-16 rounded-2xl shadow-2xl text-center border-2 border-white/10">
+            <div className="bg-gradient-to-br from-[#1A3D7C]/80 via-[#2a5294]/70 to-[#1A3D7C]/80 backdrop-blur-sm text-white p-12 md:p-16 rounded-2xl shadow-2xl text-center border-2 border-[#1A3D7C]/30">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">
                 Get Your Custom Quote Today
               </h2>
