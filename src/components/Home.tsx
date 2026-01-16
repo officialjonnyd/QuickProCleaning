@@ -71,25 +71,40 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative bg-gradient-to-br from-[#1A3D7C] via-[#2a5294] to-[#1A3D7C] text-white py-24 overflow-hidden">
+      <section className="relative text-white py-24 overflow-hidden">
+        {/* Slideshow Background */}
+        <div className="absolute inset-0">
+          {slides.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image}
+                alt="Commercial cleaning background"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Blue Gradient Overlay - fades from left to right */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to right, rgba(26, 61, 124, 0.95) 0%, rgba(26, 61, 124, 0.85) 30%, rgba(26, 61, 124, 0.6) 60%, rgba(26, 61, 124, 0.3) 100%)'
+          }}
+        />
+
+        {/* Subtle dot pattern overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
             backgroundSize: '40px 40px'
           }} />
         </div>
-
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: 'url(/reliable_commercial_cleaning_you_can_trust.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, transparent 100%)'
-          }}
-        />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -138,53 +153,6 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[#7ABB00]" />
                 <span>Eco-Friendly Solutions</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
-                See The Difference
-              </h2>
-              <p className="text-lg text-gray-600">
-                From cluttered to pristine - professional cleaning that transforms your space
-              </p>
-            </div>
-
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              {slides.map((image, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt="Commercial cleaning showcase"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-
-              <div className="absolute bottom-8 right-8 flex gap-2 z-10">
-                {slides.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      index === currentSlide
-                        ? 'bg-white w-8'
-                        : 'bg-white/50 hover:bg-white/75'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
               </div>
             </div>
           </div>
