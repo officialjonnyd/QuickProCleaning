@@ -17,12 +17,11 @@ export default function About() {
       </section>
 
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <img
-            src="https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg"
-            alt="Professional cleaning team"
-            className="w-full h-full object-cover"
-          />
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <spline-viewer
+            url="https://prod.spline.design/AOLNbsmK0NvCAlot/scene.splinecode"
+            className="w-full h-full"
+          ></spline-viewer>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -31,13 +30,9 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 At QuickPro Cleaning Solutions Ltd, we combine commercial cleaning expertise with certified sanitation and disinfection services to protect your spaces and the people in them. We understand that cleanliness is more than appearance—it's about health, safety, and peace of mind.
               </p>
-
-              <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl mb-8">
-                <spline-viewer url="https://prod.spline.design/AOLNbsmK0NvCAlot/scene.splinecode"></spline-viewer>
-              </div>
             </div>
 
             <div className="glass-green border-2 border-[#7ABB00]/30 text-[#1A3D7C] p-8 md:p-12 rounded-2xl shadow-2xl mb-16">
