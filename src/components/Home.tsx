@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative text-white py-24 overflow-hidden">
+      <section className="relative text-white py-16 md:py-24 overflow-hidden">
         {/* Slideshow Background */}
         <div className="absolute inset-0">
           {slides.map((image, index) => (
@@ -80,7 +80,7 @@ export default function Home() {
               <img
                 src={image}
                 alt="Commercial cleaning background"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           ))}
