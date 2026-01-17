@@ -53,8 +53,15 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-15 pointer-events-none">
+          <hana-viewer
+            url="https://prod.spline.design/Vht2FZbJZDv5avEL-FND/scene.hanacode"
+            className="w-full h-full"
+          ></hana-viewer>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="glass-white border-l-4 border-[#7ABB00] p-6 rounded-r-2xl mb-12 shadow-xl">
               <div className="flex gap-3">
