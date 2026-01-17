@@ -54,10 +54,10 @@ export default function Pricing() {
       </section>
 
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15 pointer-events-none">
+        <div className="absolute inset-0 opacity-15 pointer-events-none bg-white">
           <hana-viewer
             url="https://prod.spline.design/Vht2FZbJZDv5avEL-FND/scene.hanacode"
-            className="w-full h-full"
+            style={{ width: '100%', height: '100%', display: 'block' }}
           ></hana-viewer>
         </div>
 
