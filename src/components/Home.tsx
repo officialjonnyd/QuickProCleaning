@@ -35,33 +35,33 @@ export default function Home() {
   const services = [
     {
       icon: Building2,
-      title: 'Commercial Cleaning',
-      description: 'Professional cleaning for offices, facilities, Airbnb\'s, and commercial spaces.'
+      title: 'Airbnb & Rental Turnover',
+      description: 'Specialized cleaning for Airbnb hosts and rental properties, ensuring units are move-in ready after every guest.'
     },
     {
       icon: ShieldCheck,
-      title: 'Sanitation & Disinfection',
-      description: 'Certified hospital-grade disinfection for high-risk environments.'
+      title: 'Property Management Cleaning',
+      description: 'Comprehensive cleaning solutions tailored for property managers handling multiple units and tenant turnovers.'
     },
     {
       icon: HeartPulse,
-      title: 'Medical Facility Cleaning',
-      description: 'Specialized protocols for clinics, dental offices, and medical practices.'
+      title: 'Move-In & Move-Out Cleaning',
+      description: 'Detailed cleaning services to restore rental properties to pristine condition between tenants.'
     },
     {
       icon: Briefcase,
-      title: 'Office & Facility Cleaning',
-      description: 'Keep your workplace fresh, productive, and healthy.'
+      title: 'Commercial Window Cleaning',
+      description: 'Professional window and glass cleaning for storefronts, offices, and commercial buildings.'
     },
     {
       icon: Landmark,
-      title: 'Banking Facilities',
-      description: 'Professional cleaning for high-visibility, high-security environments.'
+      title: 'Office & Facility Cleaning',
+      description: 'Keep your workplace fresh, organized, and professional with regular cleaning services.'
     },
     {
       icon: Car,
-      title: 'Dealership & Showroom',
-      description: 'Showroom floor care to help your inventory shine.'
+      title: 'Post-Construction Cleaning',
+      description: 'Remove construction dust and debris to prepare buildings for occupancy or presentation.'
     }
   ];
 
@@ -110,11 +110,11 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-2xl">
-              Professional Commercial Cleaning & <span className="text-[#7ABB00]">Sanitation Services</span>
+              Commercial Window & Glass Cleaning <span className="text-[#7ABB00]">You Can Trust</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-              Certified sanitation and disinfection services backed by professional commercial cleaning designed for medical clinics, dental clinics, offices, banks, move-in-and out cleaning, vehicle dealerships & more.
+              Professional cleaning services designed for Airbnb hosts, property managers, commercial spaces, offices, banks, and more. Specializing in move-in/move-out cleaning, tenant turnover, and property management cleaning solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -162,7 +162,7 @@ export default function Home() {
               About QuickPro
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              We are certified sanitation and disinfection specialists, focused on protecting people and spaces in professional environments — serving clinics, offices, banking facilities and more.
+              Professional cleaning services focused on property management, Airbnb turnover, commercial spaces, and move-in/move-out cleaning — serving property managers, business owners, and facility managers across the region.
             </p>
           </div>
 
@@ -244,10 +244,10 @@ export default function Home() {
       <section className="py-20 bg-[#7ABB00] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Need reliable cleaning or disinfection for your business?
+            Need reliable cleaning for your property or business?
           </h2>
           <p className="text-xl mb-8 text-white/90">
-            Get a free quote today and experience the QuickPro difference
+            Whether you manage Airbnb properties, rental units, or commercial spaces — get a free quote today
           </p>
           <Link
             to="/contact"
