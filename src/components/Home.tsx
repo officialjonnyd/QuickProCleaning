@@ -155,60 +155,60 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white relative overflow-hidden">
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/5217882/pexels-photo-5217882.jpeg"
             alt="Professional window cleaning"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-white/90" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
-              About QuickPro
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Professional cleaning services focused on property management, Airbnb turnover, commercial spaces, and move-in/move-out cleaning — serving property managers, business owners, and facility managers across the region.
-            </p>
-          </div>
+        <section className="py-16 bg-white/95 relative">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
+                About QuickPro
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Professional cleaning services focused on property management, Airbnb turnover, commercial spaces, and move-in/move-out cleaning — serving property managers, business owners, and facility managers across the region.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShieldCheck className="w-8 h-8 text-[#7ABB00]" />
+            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ShieldCheck className="w-8 h-8 text-[#7ABB00]" />
+                </div>
+                <h3 className="font-semibold text-[#1A3D7C] mb-2">Certified</h3>
+                <p className="text-sm text-gray-600">Professional protocols</p>
               </div>
-              <h3 className="font-semibold text-[#1A3D7C] mb-2">Certified</h3>
-              <p className="text-sm text-gray-600">Professional protocols</p>
-            </div>
-            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-[#7ABB00]" />
+                </div>
+                <h3 className="font-semibold text-[#1A3D7C] mb-2">Flexible</h3>
+                <p className="text-sm text-gray-600">Scheduling available</p>
               </div>
-              <h3 className="font-semibold text-[#1A3D7C] mb-2">Flexible</h3>
-              <p className="text-sm text-gray-600">Scheduling available</p>
-            </div>
-            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Leaf className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="w-8 h-8 text-[#7ABB00]" />
+                </div>
+                <h3 className="font-semibold text-[#1A3D7C] mb-2">Eco-Friendly</h3>
+                <p className="text-sm text-gray-600">Safe products</p>
               </div>
-              <h3 className="font-semibold text-[#1A3D7C] mb-2">Eco-Friendly</h3>
-              <p className="text-sm text-gray-600">Safe products</p>
-            </div>
-            <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-              <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
+                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-[#7ABB00]" />
+                </div>
+                <h3 className="font-semibold text-[#1A3D7C] mb-2">Trusted</h3>
+                <p className="text-sm text-gray-600">Reliable service</p>
               </div>
-              <h3 className="font-semibold text-[#1A3D7C] mb-2">Trusted</h3>
-              <p className="text-sm text-gray-600">Reliable service</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50/95 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
@@ -249,6 +249,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
       <section className="py-20 bg-[#7ABB00] text-white">
         <div className="container mx-auto px-4 text-center">
