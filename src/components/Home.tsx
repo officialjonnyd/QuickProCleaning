@@ -155,8 +155,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/5217882/pexels-photo-5217882.jpeg"
+            alt="Professional window cleaning"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/90" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
               About QuickPro
