@@ -134,7 +134,7 @@ export default function Services() {
       <section className="py-16 bg-white relative overflow-hidden">
         {/* Straight lines background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.3 }}>
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" style={{ opacity: 0.3 }}>
             <defs>
               <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stopColor="#7ABB00" stopOpacity="1" />
@@ -153,104 +153,114 @@ export default function Services() {
 
             {/* Line 1 - thin to thick */}
             <line
-              x1="50" y1="0"
-              x2="50" y2="100%"
+              x1="5%" y1="0"
+              x2="5%" y2="100%"
               stroke="url(#lineGradient1)"
               strokeWidth="1"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="2;12;2" dur="4s" repeatCount="indefinite" />
             </line>
 
             {/* Line 2 - thick to thin */}
             <line
-              x1="150" y1="0"
-              x2="150" y2="100%"
+              x1="15%" y1="0"
+              x2="15%" y2="100%"
               stroke="url(#lineGradient2)"
               strokeWidth="10"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="12;3;12" dur="5s" repeatCount="indefinite" />
             </line>
 
             {/* Line 3 - pulsing */}
             <line
-              x1="250" y1="0"
-              x2="250" y2="100%"
+              x1="25%" y1="0"
+              x2="25%" y2="100%"
               stroke="url(#lineGradient3)"
               strokeWidth="6"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="5;18;5" dur="3.5s" repeatCount="indefinite" />
             </line>
 
             {/* Line 4 - smooth flow */}
             <line
-              x1="350" y1="0"
-              x2="350" y2="100%"
+              x1="35%" y1="0"
+              x2="35%" y2="100%"
               stroke="url(#lineGradient1)"
               strokeWidth="4"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="4;15;4" dur="4.5s" repeatCount="indefinite" />
             </line>
 
             {/* Line 5 - right side thin to thick */}
             <line
-              x1="450" y1="0"
-              x2="450" y2="100%"
+              x1="45%" y1="0"
+              x2="45%" y2="100%"
               stroke="url(#lineGradient2)"
               strokeWidth="3"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="3;14;3" dur="5.5s" repeatCount="indefinite" />
             </line>
 
             {/* Line 6 - accent */}
             <line
-              x1="550" y1="0"
-              x2="550" y2="100%"
+              x1="55%" y1="0"
+              x2="55%" y2="100%"
               stroke="url(#lineGradient3)"
               strokeWidth="2"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="2;10;2" dur="6s" repeatCount="indefinite" />
             </line>
 
             {/* Line 7 */}
             <line
-              x1="650" y1="0"
-              x2="650" y2="100%"
+              x1="65%" y1="0"
+              x2="65%" y2="100%"
               stroke="url(#lineGradient1)"
               strokeWidth="7"
               opacity="0.6"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="7;20;7" dur="4s" repeatCount="indefinite" />
             </line>
 
             {/* Line 8 */}
             <line
-              x1="750" y1="0"
-              x2="750" y2="100%"
+              x1="75%" y1="0"
+              x2="75%" y2="100%"
               stroke="url(#lineGradient2)"
               strokeWidth="8"
               opacity="0.6"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="8;22;8" dur="5s" repeatCount="indefinite" />
             </line>
 
             {/* Line 9 */}
             <line
-              x1="850" y1="0"
-              x2="850" y2="100%"
+              x1="85%" y1="0"
+              x2="85%" y2="100%"
               stroke="url(#lineGradient3)"
               strokeWidth="5"
               opacity="0.6"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="5;16;5" dur="4.8s" repeatCount="indefinite" />
             </line>
 
             {/* Line 10 */}
             <line
-              x1="950" y1="0"
-              x2="950" y2="100%"
+              x1="95%" y1="0"
+              x2="95%" y2="100%"
               stroke="url(#lineGradient1)"
               strokeWidth="4"
               opacity="0.7"
+              vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="4;13;4" dur="5.2s" repeatCount="indefinite" />
             </line>
