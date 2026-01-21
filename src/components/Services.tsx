@@ -1,6 +1,22 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export default function Services() {
+  const [officeSlideIndex, setOfficeSlideIndex] = useState(0);
+
+  const officeImages = [
+    'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg',
+    'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg',
+    'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg'
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setOfficeSlideIndex((prev) => (prev + 1) % officeImages.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, [officeImages.length]);
+
   const services = [
     {
       title: 'Commercial Cleaning',
@@ -11,14 +27,14 @@ export default function Services() {
     {
       title: 'Post-Construction Cleaning',
       description: 'Detailed cleaning services for newly constructed or renovated spaces. We remove dust, debris, and construction residue to prepare buildings for occupancy, presentation, or final inspections.',
-      image: 'https://images.pexels.com/photos/8961188/pexels-photo-8961188.jpeg',
-      alt: 'Post-construction cleaning and debris removal'
+      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg',
+      alt: 'Construction site during home building'
     },
     {
       title: 'Move-In & Move-Out Cleaning',
       description: 'Specialized cleaning for rental properties, property managers, and Airbnb hosts after tenants or guests move out. This service focuses on restoring units to move-in-ready condition and is not standard residential cleaning.',
-      image: 'https://images.pexels.com/photos/4239039/pexels-photo-4239039.jpeg',
-      alt: 'Rental property and Airbnb turnover cleaning'
+      image: 'https://images.pexels.com/photos/6196307/pexels-photo-6196307.jpeg',
+      alt: 'Empty apartment unit being cleaned'
     },
     {
       title: 'Window Cleaning',
@@ -35,38 +51,32 @@ export default function Services() {
     {
       title: 'Office Cleaning',
       description: 'Professional office cleaning services focused on workspaces, common areas, washrooms, and kitchens to support a clean, productive, and professional office environment.',
-      image: 'https://images.pexels.com/photos/7235859/pexels-photo-7235859.jpeg',
-      alt: 'Office workspace and common area cleaning'
-    },
-    {
-      title: 'ECO-Friendly Cleaning (Upon Request)',
-      description: 'Environmentally conscious cleaning options available upon request, using eco-friendly products and methods suitable for businesses prioritizing sustainability.',
-      image: 'https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg',
-      alt: 'Eco-friendly green cleaning products and services'
+      images: officeImages,
+      alt: 'Clean office boardroom and workspace'
     },
     {
       title: 'Building Cleaning',
       description: 'Comprehensive cleaning services for entire commercial buildings, including shared spaces, hallways, restrooms, and common areas.',
-      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg',
-      alt: 'Commercial building lobby and common area cleaning'
+      image: 'https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg',
+      alt: 'Commercial building hallway'
     },
     {
       title: 'Medical Facility Cleaning',
       description: 'Cleaning services tailored for medical clinics and healthcare environments with a focus on cleanliness, detail, and maintaining professional care spaces.',
-      image: 'https://images.pexels.com/photos/4031818/pexels-photo-4031818.jpeg',
-      alt: 'Medical clinic and healthcare facility cleaning'
+      image: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg',
+      alt: 'Clean dental office and medical facility'
     },
     {
       title: 'Dealership Cleaning',
       description: 'Professional cleaning for automotive dealerships, including showrooms, offices, and customer areas to maintain a polished and professional appearance.',
-      image: 'https://images.pexels.com/photos/3354647/pexels-photo-3354647.jpeg',
-      alt: 'Auto dealership showroom and facility cleaning'
+      image: 'https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg',
+      alt: 'Clean car dealership showroom'
     },
     {
       title: 'Financial Institution Cleaning',
       description: 'Discreet and reliable cleaning services for banks and financial offices, ensuring clean, professional environments for clients and staff.',
-      image: 'https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg',
-      alt: 'Bank and financial office cleaning services'
+      image: 'https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg',
+      alt: 'Bank interior and teller area'
     },
     {
       title: 'Gym & Fitness Cleaning',
@@ -83,8 +93,8 @@ export default function Services() {
     {
       title: 'Sanitizing & Disinfecting Services',
       description: 'Targeted sanitizing and disinfecting services for commercial spaces, focusing on high-touch surfaces and shared areas.',
-      image: 'https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg',
-      alt: 'Commercial disinfecting and sanitizing service'
+      image: 'https://images.pexels.com/photos/4167544/pexels-photo-4167544.jpeg',
+      alt: 'Professional sanitizing with protective equipment'
     }
   ];
 
@@ -125,6 +135,8 @@ export default function Services() {
           <div className="max-w-6xl mx-auto space-y-8">
             {services.map((service, index) => {
               const isEven = index % 2 === 0;
+              const hasSlideshow = service.images && service.images.length > 0;
+
               return (
                 <div
                   key={index}
@@ -141,11 +153,30 @@ export default function Services() {
                     </div>
 
                     <div className={`relative overflow-hidden min-h-[250px] ${isEven ? 'md:order-2' : 'md:order-1'}`}>
-                      <img
-                        src={service.image}
-                        alt={service.alt}
-                        className="w-full h-full object-cover"
-                      />
+                      {hasSlideshow ? (
+                        <>
+                          {service.images.map((img, imgIndex) => (
+                            <div
+                              key={imgIndex}
+                              className={`absolute inset-0 transition-opacity duration-1000 ${
+                                imgIndex === officeSlideIndex ? 'opacity-100' : 'opacity-0'
+                              }`}
+                            >
+                              <img
+                                src={img}
+                                alt={`${service.alt} ${imgIndex + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ))}
+                        </>
+                      ) : (
+                        <img
+                          src={service.image}
+                          alt={service.alt}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
