@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 export default function Services() {
   const [officeSlideIndex, setOfficeSlideIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const officeImages = [
     'https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg',
@@ -136,11 +137,20 @@ export default function Services() {
             {services.map((service, index) => {
               const isEven = index % 2 === 0;
               const hasSlideshow = service.images && service.images.length > 0;
+              const isHovered = hoveredIndex === index;
+              const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index;
 
               return (
                 <div
                   key={index}
-                  className="glass-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  className={`glass-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-out ${
+                    isHovered ? 'scale-105 shadow-2xl z-10' : ''
+                  } ${
+                    isOtherHovered ? 'opacity-40 blur-sm scale-95' : 'opacity-100'
+                  }`}
+                  style={{ transformOrigin: 'center' }}
                 >
                   <div className={`grid md:grid-cols-2 gap-6 ${isEven ? '' : 'md:grid-flow-dense'}`}>
                     <div className={`p-8 flex flex-col justify-center ${isEven ? 'md:order-1' : 'md:order-2'}`}>
