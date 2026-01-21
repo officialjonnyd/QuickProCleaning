@@ -6,10 +6,12 @@ import Services from './components/Services';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import PropertyManagement from './components/PropertyManagement';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
