@@ -80,6 +80,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </li>
                 <li>
                   <Link
+                    to="/property-management"
+                    className={`hover:text-[#7ABB00] transition-colors ${
+                      isActive('/property-management') ? 'text-[#7ABB00]' : 'text-gray-700'
+                    }`}
+                  >
+                    Property Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/about"
                     className={`hover:text-[#7ABB00] transition-colors ${
                       isActive('/about') ? 'text-[#7ABB00]' : 'text-gray-700'
@@ -164,6 +174,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </li>
                   <li>
                     <Link
+                      to="/property-management"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-colors ${
+                        isActive('/property-management')
+                          ? 'bg-[#7ABB00]/10 text-[#7ABB00] font-semibold'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      Property Management
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       to="/about"
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`block px-4 py-3 rounded-lg transition-colors ${
@@ -242,6 +265,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
                 <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
+                <li><Link to="/property-management" className="text-gray-400 hover:text-white transition-colors">Property Management</Link></li>
                 <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
                 <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               </ul>
@@ -251,11 +275,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-semibold mb-4 text-[#7ABB00]">Services</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>Commercial Cleaning</li>
-                <li>Sanitation & Disinfection</li>
+                <li>Property Management Cleaning</li>
                 <li>Medical Facility Cleaning</li>
                 <li>Office Cleaning</li>
-                <li>Banking Facilities</li>
-                <li>Dealership Cleaning</li>
+                <li>Airbnb Turnover Cleaning</li>
+                <li>Move-Out Cleaning</li>
               </ul>
             </div>
 

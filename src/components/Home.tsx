@@ -109,12 +109,12 @@ export default function Home() {
               CERTIFIED & RELIABLE
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-2xl">
-              Commercial Window & Glass Cleaning <span className="text-[#7ABB00]">You Can Trust</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-2xl">
+              Commercial & Property Management Cleaning Services in <span className="text-[#7ABB00]">Edmonton</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg">
-              Professional cleaning services designed for Airbnb hosts, property managers, commercial spaces, offices, banks, and more. Specializing in move-in/move-out cleaning, tenant turnover, and property management cleaning solutions.
+              We provide professional commercial, Airbnb, and property management cleaning services throughout Edmonton and surrounding areas. From move-out rental cleaning and post-construction cleanup to commercial window and building cleaning, our services are designed to keep properties clean, presentable, and ready for occupancy.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

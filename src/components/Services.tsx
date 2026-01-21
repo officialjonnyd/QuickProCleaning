@@ -5,72 +5,86 @@ export default function Services() {
     {
       title: 'Commercial Cleaning',
       description: 'Professional commercial cleaning services designed to maintain clean, organized, and professional business environments. Ideal for offices, retail spaces, and commercial facilities requiring consistent, high-quality cleaning.',
-      imagePlaceholder: 'Commercial cleaning in progress'
+      image: 'https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg',
+      alt: 'Professional commercial office cleaning service'
     },
     {
       title: 'Post-Construction Cleaning',
       description: 'Detailed cleaning services for newly constructed or renovated spaces. We remove dust, debris, and construction residue to prepare buildings for occupancy, presentation, or final inspections.',
-      imagePlaceholder: 'Post-construction cleaning site'
+      image: 'https://images.pexels.com/photos/8961188/pexels-photo-8961188.jpeg',
+      alt: 'Post-construction cleaning and debris removal'
     },
     {
       title: 'Move-In & Move-Out Cleaning',
       description: 'Specialized cleaning for rental properties, property managers, and Airbnb hosts after tenants or guests move out. This service focuses on restoring units to move-in-ready condition and is not standard residential cleaning.',
-      imagePlaceholder: 'Rental property turnover cleaning'
+      image: 'https://images.pexels.com/photos/4239039/pexels-photo-4239039.jpeg',
+      alt: 'Rental property and Airbnb turnover cleaning'
     },
     {
       title: 'Window Cleaning',
       description: 'Commercial window and glass cleaning for ground-level businesses with storefront windows, offices, and large glass fixtures. Enhances visibility, presentation, and curb appeal.',
-      imagePlaceholder: 'Commercial window cleaning'
+      image: 'https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg',
+      alt: 'Commercial window and glass cleaning service'
     },
     {
       title: 'Janitorial Services',
       description: 'Ongoing janitorial services tailored to your facility\'s needs. Includes routine cleaning, waste removal, and maintenance tasks to ensure a clean and functional environment.',
-      imagePlaceholder: 'Janitorial staff at work'
+      image: 'https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg',
+      alt: 'Professional janitorial and building maintenance'
     },
     {
       title: 'Office Cleaning',
       description: 'Professional office cleaning services focused on workspaces, common areas, washrooms, and kitchens to support a clean, productive, and professional office environment.',
-      imagePlaceholder: 'Office cleaning service'
+      image: 'https://images.pexels.com/photos/7235859/pexels-photo-7235859.jpeg',
+      alt: 'Office workspace and common area cleaning'
     },
     {
       title: 'ECO-Friendly Cleaning (Upon Request)',
       description: 'Environmentally conscious cleaning options available upon request, using eco-friendly products and methods suitable for businesses prioritizing sustainability.',
-      imagePlaceholder: 'Eco-friendly cleaning supplies in use'
+      image: 'https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg',
+      alt: 'Eco-friendly green cleaning products and services'
     },
     {
       title: 'Building Cleaning',
       description: 'Comprehensive cleaning services for entire commercial buildings, including shared spaces, hallways, restrooms, and common areas.',
-      imagePlaceholder: 'Commercial building cleaning'
+      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg',
+      alt: 'Commercial building lobby and common area cleaning'
     },
     {
       title: 'Medical Facility Cleaning',
       description: 'Cleaning services tailored for medical clinics and healthcare environments with a focus on cleanliness, detail, and maintaining professional care spaces.',
-      imagePlaceholder: 'Medical facility cleaning'
+      image: 'https://images.pexels.com/photos/4031818/pexels-photo-4031818.jpeg',
+      alt: 'Medical clinic and healthcare facility cleaning'
     },
     {
       title: 'Dealership Cleaning',
       description: 'Professional cleaning for automotive dealerships, including showrooms, offices, and customer areas to maintain a polished and professional appearance.',
-      imagePlaceholder: 'Car dealership showroom cleaning'
+      image: 'https://images.pexels.com/photos/3354647/pexels-photo-3354647.jpeg',
+      alt: 'Auto dealership showroom and facility cleaning'
     },
     {
       title: 'Financial Institution Cleaning',
       description: 'Discreet and reliable cleaning services for banks and financial offices, ensuring clean, professional environments for clients and staff.',
-      imagePlaceholder: 'Financial institution cleaning'
+      image: 'https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg',
+      alt: 'Bank and financial office cleaning services'
     },
     {
       title: 'Gym & Fitness Cleaning',
       description: 'Cleaning services designed for gyms and fitness centers, focusing on equipment areas, locker rooms, and high-traffic spaces.',
-      imagePlaceholder: 'Gym cleaning service'
+      image: 'https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg',
+      alt: 'Gym and fitness center equipment cleaning'
     },
     {
       title: 'Daycare & School Cleaning',
       description: 'Professional cleaning services for schools and daycare facilities, maintaining clean, organized spaces for students, staff, and visitors.',
-      imagePlaceholder: 'School or daycare cleaning'
+      image: 'https://images.pexels.com/photos/8364026/pexels-photo-8364026.jpeg',
+      alt: 'School and daycare facility cleaning'
     },
     {
       title: 'Sanitizing & Disinfecting Services',
       description: 'Targeted sanitizing and disinfecting services for commercial spaces, focusing on high-touch surfaces and shared areas.',
-      imagePlaceholder: 'Surface disinfecting service'
+      image: 'https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg',
+      alt: 'Commercial disinfecting and sanitizing service'
     }
   ];
 
@@ -126,10 +140,12 @@ export default function Services() {
                       </p>
                     </div>
 
-                    <div className={`bg-gray-100 flex items-center justify-center p-8 min-h-[250px] ${isEven ? 'md:order-2' : 'md:order-1'}`}>
-                      <div className="text-center text-gray-400">
-                        <div className="text-sm font-medium">{service.imagePlaceholder}</div>
-                      </div>
+                    <div className={`relative overflow-hidden min-h-[250px] ${isEven ? 'md:order-2' : 'md:order-1'}`}>
+                      <img
+                        src={service.image}
+                        alt={service.alt}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
