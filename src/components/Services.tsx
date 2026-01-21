@@ -200,7 +200,7 @@ export default function Services() {
                               <img
                                 src={img}
                                 alt={`${service.alt} ${imgIndex + 1}`}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                           ))}
@@ -209,7 +209,7 @@ export default function Services() {
                         <img
                           src={service.image}
                           alt={service.alt}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       )}
                     </div>
