@@ -33,7 +33,7 @@ export default function Services() {
     {
       title: 'Move-In & Move-Out Cleaning',
       description: 'Specialized cleaning for rental properties, property managers, and Airbnb hosts after tenants or guests move out. This service focuses on restoring units to move-in-ready condition and is not standard residential cleaning.',
-      image: 'https://images.pexels.com/photos/6196307/pexels-photo-6196307.jpeg',
+      image: 'https://images.pexels.com/photos/4099468/pexels-photo-4099468.jpeg',
       alt: 'Empty apartment unit being cleaned'
     },
     {
