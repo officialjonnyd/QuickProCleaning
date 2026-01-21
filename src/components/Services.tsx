@@ -153,136 +153,186 @@ export default function Services() {
 
             {/* Line 1 - thin to thick */}
             <line
-              x1="5%" y1="-50%"
-              x2="5%" y2="150%"
+              x1="5%" y1="-100"
+              x2="5%" y2="2000"
               stroke="url(#lineGradient1)"
               strokeWidth="1"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="2;12;2" dur="4s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;50%;-50%" dur="8s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;250%;150%" dur="8s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 100; 0 0"
+                dur="8s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 2 - thick to thin */}
             <line
-              x1="15%" y1="-50%"
-              x2="15%" y2="150%"
+              x1="15%" y1="-100"
+              x2="15%" y2="2000"
               stroke="url(#lineGradient2)"
               strokeWidth="10"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="12;3;12" dur="5s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;40%;-50%" dur="10s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;240%;150%" dur="10s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 -80; 0 0"
+                dur="10s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 3 - pulsing */}
             <line
-              x1="25%" y1="-50%"
-              x2="25%" y2="150%"
+              x1="25%" y1="-100"
+              x2="25%" y2="2000"
               stroke="url(#lineGradient3)"
               strokeWidth="6"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="5;18;5" dur="3.5s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;30%;-50%" dur="7s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;230%;150%" dur="7s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 120; 0 0"
+                dur="7s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 4 - smooth flow */}
             <line
-              x1="35%" y1="-50%"
-              x2="35%" y2="150%"
+              x1="35%" y1="-100"
+              x2="35%" y2="2000"
               stroke="url(#lineGradient1)"
               strokeWidth="4"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="4;15;4" dur="4.5s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;45%;-50%" dur="9s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;245%;150%" dur="9s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 -60; 0 0"
+                dur="9s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 5 - right side thin to thick */}
             <line
-              x1="45%" y1="-50%"
-              x2="45%" y2="150%"
+              x1="45%" y1="-100"
+              x2="45%" y2="2000"
               stroke="url(#lineGradient2)"
               strokeWidth="3"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="3;14;3" dur="5.5s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;35%;-50%" dur="11s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;235%;150%" dur="11s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 90; 0 0"
+                dur="11s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 6 - accent */}
             <line
-              x1="55%" y1="-50%"
-              x2="55%" y2="150%"
+              x1="55%" y1="-100"
+              x2="55%" y2="2000"
               stroke="url(#lineGradient3)"
               strokeWidth="2"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="2;10;2" dur="6s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;55%;-50%" dur="8.5s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;255%;150%" dur="8.5s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 -100; 0 0"
+                dur="8.5s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 7 */}
             <line
-              x1="65%" y1="-50%"
-              x2="65%" y2="150%"
+              x1="65%" y1="-100"
+              x2="65%" y2="2000"
               stroke="url(#lineGradient1)"
               strokeWidth="7"
               opacity="0.6"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="7;20;7" dur="4s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;60%;-50%" dur="10.5s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;260%;150%" dur="10.5s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 70; 0 0"
+                dur="10.5s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 8 */}
             <line
-              x1="75%" y1="-50%"
-              x2="75%" y2="150%"
+              x1="75%" y1="-100"
+              x2="75%" y2="2000"
               stroke="url(#lineGradient2)"
               strokeWidth="8"
               opacity="0.6"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="8;22;8" dur="5s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;25%;-50%" dur="9.5s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;225%;150%" dur="9.5s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 -110; 0 0"
+                dur="9.5s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 9 */}
             <line
-              x1="85%" y1="-50%"
-              x2="85%" y2="150%"
+              x1="85%" y1="-100"
+              x2="85%" y2="2000"
               stroke="url(#lineGradient3)"
               strokeWidth="5"
               opacity="0.6"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="5;16;5" dur="4.8s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;42%;-50%" dur="7.8s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;242%;150%" dur="7.8s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 85; 0 0"
+                dur="7.8s"
+                repeatCount="indefinite"
+              />
             </line>
 
             {/* Line 10 */}
             <line
-              x1="95%" y1="-50%"
-              x2="95%" y2="150%"
+              x1="95%" y1="-100"
+              x2="95%" y2="2000"
               stroke="url(#lineGradient1)"
               strokeWidth="4"
               opacity="0.7"
               vectorEffect="non-scaling-stroke"
             >
               <animate attributeName="stroke-width" values="4;13;4" dur="5.2s" repeatCount="indefinite" />
-              <animate attributeName="y1" values="-50%;48%;-50%" dur="8.2s" repeatCount="indefinite" />
-              <animate attributeName="y2" values="150%;248%;150%" dur="8.2s" repeatCount="indefinite" />
+              <animateTransform
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 -75; 0 0"
+                dur="8.2s"
+                repeatCount="indefinite"
+              />
             </line>
           </svg>
         </div>
