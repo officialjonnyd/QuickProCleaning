@@ -70,7 +70,7 @@ export default function Services() {
     {
       title: 'Dealership Cleaning',
       description: 'Professional cleaning for automotive dealerships, including showrooms, offices, and customer areas to maintain a polished and professional appearance.',
-      image: 'https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg',
+      image: 'https://images.pexels.com/photos/2526127/pexels-photo-2526127.jpeg',
       alt: 'Car dealership lot with vehicles'
     },
     {
@@ -134,6 +134,26 @@ export default function Services() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto space-y-8">
+            {/* Property Management Link */}
+            <Link
+              to="/property-management"
+              className="block p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, rgba(200, 200, 200, 0.4) 0%, rgba(150, 150, 150, 0.4) 100%)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.3)'
+              }}
+            >
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-[#1A3D7C] mb-4">
+                  Property Management & AirBnb Click Here!
+                </h3>
+                <p className="text-gray-700 text-lg">
+                  Specialized cleaning services for property managers and vacation rental hosts
+                </p>
+              </div>
+            </Link>
+
             {services.map((service, index) => {
               const isEven = index % 2 === 0;
               const hasSlideshow = service.images && service.images.length > 0;
@@ -145,12 +165,17 @@ export default function Services() {
                   key={index}
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  className={`glass-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-out ${
+                  className={`rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-out ${
                     isHovered ? 'scale-105 shadow-2xl z-10' : ''
                   } ${
                     isOtherHovered ? 'opacity-40 blur-sm scale-95' : 'opacity-100'
                   }`}
-                  style={{ transformOrigin: 'center' }}
+                  style={{
+                    transformOrigin: 'center',
+                    background: 'linear-gradient(135deg, rgba(200, 200, 200, 0.3) 0%, rgba(150, 150, 150, 0.3) 100%)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)'
+                  }}
                 >
                   <div className={`grid md:grid-cols-2 gap-6 ${isEven ? '' : 'md:grid-flow-dense'}`}>
                     <div className={`p-8 flex flex-col justify-center ${isEven ? 'md:order-1' : 'md:order-2'}`}>
@@ -162,7 +187,7 @@ export default function Services() {
                       </p>
                     </div>
 
-                    <div className={`relative overflow-hidden min-h-[250px] ${isEven ? 'md:order-2' : 'md:order-1'}`}>
+                    <div className={`relative overflow-hidden h-[350px] ${isEven ? 'md:order-2' : 'md:order-1'}`}>
                       {hasSlideshow ? (
                         <>
                           {service.images.map((img, imgIndex) => (
