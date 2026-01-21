@@ -20,6 +20,12 @@ export default function Services() {
 
   const services = [
     {
+      title: 'Window Cleaning',
+      description: 'Commercial window and glass cleaning for ground-level businesses with storefront windows, offices, and large glass fixtures. Enhances visibility, presentation, and curb appeal.',
+      image: 'https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg',
+      alt: 'Commercial window and glass cleaning service'
+    },
+    {
       title: 'Commercial Cleaning',
       description: 'Professional commercial cleaning services designed to maintain clean, organized, and professional business environments. Ideal for offices, retail spaces, and commercial facilities requiring consistent, high-quality cleaning.',
       image: 'https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg',
@@ -36,12 +42,6 @@ export default function Services() {
       description: 'Specialized cleaning for rental properties, property managers, and Airbnb hosts after tenants or guests move out. This service focuses on restoring units to move-in-ready condition and is not standard residential cleaning.',
       image: 'https://images.pexels.com/photos/4099468/pexels-photo-4099468.jpeg',
       alt: 'Empty apartment unit being cleaned'
-    },
-    {
-      title: 'Window Cleaning',
-      description: 'Commercial window and glass cleaning for ground-level businesses with storefront windows, offices, and large glass fixtures. Enhances visibility, presentation, and curb appeal.',
-      image: 'https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg',
-      alt: 'Commercial window and glass cleaning service'
     },
     {
       title: 'Janitorial Services',
