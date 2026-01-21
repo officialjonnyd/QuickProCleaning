@@ -131,8 +131,35 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 40px,
+                #7ABB00 40px,
+                #7ABB00 43px
+              )`
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 40px,
+                #1A3D7C 40px,
+                #1A3D7C 43px
+              )`
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto space-y-8">
             {/* Property Management Link */}
             <Link
