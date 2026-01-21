@@ -69,8 +69,8 @@ export default function Services() {
     {
       title: 'Dealership Cleaning',
       description: 'Professional cleaning for automotive dealerships, including showrooms, offices, and customer areas to maintain a polished and professional appearance.',
-      image: 'https://images.pexels.com/photos/1207950/pexels-photo-1207950.jpeg',
-      alt: 'Clean car dealership showroom'
+      image: 'https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg',
+      alt: 'Car dealership lot with vehicles'
     },
     {
       title: 'Financial Institution Cleaning',
