@@ -132,31 +132,125 @@ export default function Services() {
       </section>
 
       <section className="py-16 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 40px,
-                #7ABB00 40px,
-                #7ABB00 43px
-              )`
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `repeating-linear-gradient(
-                -45deg,
-                transparent,
-                transparent 40px,
-                #1A3D7C 40px,
-                #1A3D7C 43px
-              )`
-            }}
-          />
+        {/* Wavy lines background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.3 }}>
+            <defs>
+              <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#7ABB00" stopOpacity="1" />
+                <stop offset="100%" stopColor="#1A3D7C" stopOpacity="1" />
+              </linearGradient>
+              <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#1A3D7C" stopOpacity="1" />
+                <stop offset="100%" stopColor="#7ABB00" stopOpacity="1" />
+              </linearGradient>
+              <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#7ABB00" stopOpacity="1" />
+                <stop offset="50%" stopColor="#1A3D7C" stopOpacity="1" />
+                <stop offset="100%" stopColor="#7ABB00" stopOpacity="1" />
+              </linearGradient>
+            </defs>
+
+            {/* Wave 1 - thin to thick */}
+            <path
+              d="M 50 0 Q 80 150, 50 300 T 50 600 T 50 900 T 50 1200 T 50 1500 T 50 1800 T 50 2100"
+              stroke="url(#waveGradient1)"
+              strokeWidth="1"
+              fill="none"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="2;12;2" dur="4s" repeatCount="indefinite" />
+            </path>
+
+            {/* Wave 2 - thick to thin */}
+            <path
+              d="M 200 0 Q 230 180, 200 360 T 200 720 T 200 1080 T 200 1440 T 200 1800 T 200 2160"
+              stroke="url(#waveGradient2)"
+              strokeWidth="10"
+              fill="none"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="12;3;12" dur="5s" repeatCount="indefinite" />
+            </path>
+
+            {/* Wave 3 - pulsing */}
+            <path
+              d="M 400 0 Q 370 120, 400 240 T 400 480 T 400 720 T 400 960 T 400 1200 T 400 1440 T 400 1680 T 400 1920 T 400 2160"
+              stroke="url(#waveGradient3)"
+              strokeWidth="6"
+              fill="none"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="5;18;5" dur="3.5s" repeatCount="indefinite" />
+            </path>
+
+            {/* Wave 4 - smooth flow */}
+            <path
+              d="M 600 0 Q 630 150, 600 300 T 600 600 T 600 900 T 600 1200 T 600 1500 T 600 1800 T 600 2100"
+              stroke="url(#waveGradient1)"
+              strokeWidth="4"
+              fill="none"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="4;15;4" dur="4.5s" repeatCount="indefinite" />
+            </path>
+
+            {/* Wave 5 - right side thin to thick */}
+            <path
+              d="M 800 0 Q 770 180, 800 360 T 800 720 T 800 1080 T 800 1440 T 800 1800 T 800 2160"
+              stroke="url(#waveGradient2)"
+              strokeWidth="3"
+              fill="none"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="3;14;3" dur="5.5s" repeatCount="indefinite" />
+            </path>
+
+            {/* Wave 6 - far right accent */}
+            <path
+              d="M 1000 0 Q 1030 135, 1000 270 T 1000 540 T 1000 810 T 1000 1080 T 1000 1350 T 1000 1620 T 1000 1890 T 1000 2160"
+              stroke="url(#waveGradient3)"
+              strokeWidth="2"
+              fill="none"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="2;10;2" dur="6s" repeatCount="indefinite" />
+            </path>
+
+            {/* Additional pattern waves */}
+            <path
+              d="M 300 0 Q 320 165, 300 330 T 300 660 T 300 990 T 300 1320 T 300 1650 T 300 1980"
+              stroke="url(#waveGradient1)"
+              strokeWidth="7"
+              fill="none"
+              opacity="0.6"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="7;20;7" dur="4s" repeatCount="indefinite" />
+            </path>
+
+            <path
+              d="M 700 0 Q 680 142, 700 285 T 700 570 T 700 855 T 700 1140 T 700 1425 T 700 1710 T 700 1995"
+              stroke="url(#waveGradient2)"
+              strokeWidth="8"
+              fill="none"
+              opacity="0.6"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="8;22;8" dur="5s" repeatCount="indefinite" />
+            </path>
+
+            <path
+              d="M 900 0 Q 870 160, 900 320 T 900 640 T 900 960 T 900 1280 T 900 1600 T 900 1920 T 900 2240"
+              stroke="url(#waveGradient3)"
+              strokeWidth="5"
+              fill="none"
+              opacity="0.6"
+              className="wave-animate"
+            >
+              <animate attributeName="stroke-width" values="5;16;5" dur="4.8s" repeatCount="indefinite" />
+            </path>
+          </svg>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

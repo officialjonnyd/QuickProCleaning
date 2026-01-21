@@ -94,114 +94,12 @@ export default function Home() {
           }}
         />
 
-        {/* Wavy lines overlay */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.6 }}>
-            <defs>
-              <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#7ABB00" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#1A3D7C" stopOpacity="0.8" />
-              </linearGradient>
-              <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#1A3D7C" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#7ABB00" stopOpacity="0.7" />
-              </linearGradient>
-              <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#7ABB00" stopOpacity="0.6" />
-                <stop offset="50%" stopColor="#1A3D7C" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#7ABB00" stopOpacity="0.6" />
-              </linearGradient>
-            </defs>
-
-            {/* Wave 1 - thin to thick */}
-            <path
-              d="M 50 0 Q 80 100, 50 200 T 50 400 T 50 600 T 50 800"
-              stroke="url(#waveGradient1)"
-              strokeWidth="1"
-              fill="none"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="1;8;1" dur="4s" repeatCount="indefinite" />
-            </path>
-
-            {/* Wave 2 - thick to thin */}
-            <path
-              d="M 200 0 Q 230 120, 200 240 T 200 480 T 200 720"
-              stroke="url(#waveGradient2)"
-              strokeWidth="8"
-              fill="none"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="8;2;8" dur="5s" repeatCount="indefinite" />
-            </path>
-
-            {/* Wave 3 - pulsing */}
-            <path
-              d="M 400 0 Q 370 80, 400 160 T 400 320 T 400 480 T 400 640 T 400 800"
-              stroke="url(#waveGradient3)"
-              strokeWidth="4"
-              fill="none"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="4;12;4" dur="3.5s" repeatCount="indefinite" />
-            </path>
-
-            {/* Wave 4 - smooth flow */}
-            <path
-              d="M 600 0 Q 630 100, 600 200 T 600 400 T 600 600 T 600 800"
-              stroke="url(#waveGradient1)"
-              strokeWidth="3"
-              fill="none"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="3;10;3" dur="4.5s" repeatCount="indefinite" />
-            </path>
-
-            {/* Wave 5 - right side thin to thick */}
-            <path
-              d="M 800 0 Q 770 120, 800 240 T 800 480 T 800 720"
-              stroke="url(#waveGradient2)"
-              strokeWidth="2"
-              fill="none"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="2;9;2" dur="5.5s" repeatCount="indefinite" />
-            </path>
-
-            {/* Wave 6 - far right accent */}
-            <path
-              d="M 950 0 Q 980 90, 950 180 T 950 360 T 950 540 T 950 720"
-              stroke="url(#waveGradient3)"
-              strokeWidth="1"
-              fill="none"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="1;6;1" dur="6s" repeatCount="indefinite" />
-            </path>
-
-            {/* Additional pattern waves for mobile */}
-            <path
-              d="M 300 0 Q 320 110, 300 220 T 300 440 T 300 660"
-              stroke="url(#waveGradient1)"
-              strokeWidth="5"
-              fill="none"
-              opacity="0.5"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="5;15;5" dur="4s" repeatCount="indefinite" />
-            </path>
-
-            <path
-              d="M 700 0 Q 680 95, 700 190 T 700 380 T 700 570 T 700 760"
-              stroke="url(#waveGradient2)"
-              strokeWidth="6"
-              fill="none"
-              opacity="0.5"
-              className="wave-animate"
-            >
-              <animate attributeName="stroke-width" values="6;14;6" dur="5s" repeatCount="indefinite" />
-            </path>
-          </svg>
+        {/* Subtle dot pattern overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
