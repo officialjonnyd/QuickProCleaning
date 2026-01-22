@@ -131,9 +131,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 relative overflow-hidden" style={{
-        background: 'linear-gradient(to bottom, rgba(26, 61, 124, 0.3) 0%, rgba(26, 61, 124, 0.15) 50%, rgba(255, 255, 255, 1) 100%)'
-      }}>
+      <section className="py-16 relative overflow-hidden bg-white">
         {/* Straight lines background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" style={{ opacity: 0.3 }}>
@@ -346,9 +344,11 @@ export default function Services() {
               to="/property-management"
               className="block p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105"
               style={{
-                background: 'linear-gradient(135deg, rgba(200, 200, 200, 0.4) 0%, rgba(150, 150, 150, 0.4) 100%)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255, 255, 255, 0.3)'
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%)',
+                backdropFilter: 'blur(20px)',
+                border: '2px solid transparent',
+                borderImage: 'linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)) 1',
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.9)'
               }}
             >
               <div className="text-center">
@@ -379,9 +379,11 @@ export default function Services() {
                   }`}
                   style={{
                     transformOrigin: 'center',
-                    background: 'linear-gradient(135deg, rgba(200, 200, 200, 0.3) 0%, rgba(150, 150, 150, 0.3) 100%)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255, 255, 255, 0.3)'
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%)',
+                    backdropFilter: 'blur(20px)',
+                    border: '2px solid transparent',
+                    borderImage: 'linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)) 1',
+                    boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.9)'
                   }}
                 >
                   <div className={`grid md:grid-cols-2 gap-6 ${isEven ? '' : 'md:grid-flow-dense'}`}>
