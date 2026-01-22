@@ -58,7 +58,7 @@ export default function Pricing() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, rgba(26, 61, 124, 0.08) 0%, rgba(148, 163, 184, 0.12) 50%, rgba(26, 61, 124, 0.08) 100%)'
+            background: 'linear-gradient(135deg, rgba(26, 61, 124, 0.25) 0%, rgba(59, 130, 246, 0.35) 50%, rgba(26, 61, 124, 0.25) 100%)'
           }}
         />
 
