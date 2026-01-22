@@ -131,7 +131,9 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 bg-white relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden" style={{
+        background: 'linear-gradient(to bottom, rgba(122, 187, 0, 0.3) 0%, rgba(26, 61, 124, 0.2) 40%, rgba(255, 255, 255, 1) 100%)'
+      }}>
         {/* Straight lines background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" style={{ opacity: 0.3 }}>
