@@ -344,7 +344,7 @@ export default function Services() {
               to="/property-management"
               className="block p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105"
               style={{
-                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(122, 187, 0, 0.12) 50%, rgba(26, 61, 124, 0.08) 100%)',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(148, 163, 184, 0.15) 50%, rgba(26, 61, 124, 0.15) 100%)',
                 backdropFilter: 'blur(20px)',
                 border: '2px solid transparent',
                 borderImage: 'linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)) 1',
@@ -368,8 +368,8 @@ export default function Services() {
               const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index;
 
               const gradientColor = isEven
-                ? 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(122, 187, 0, 0.08) 50%, rgba(255, 255, 255, 0.5) 100%)'
-                : 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(26, 61, 124, 0.08) 50%, rgba(255, 255, 255, 0.5) 100%)';
+                ? 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(148, 163, 184, 0.18) 50%, rgba(255, 255, 255, 0.5) 100%)'
+                : 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(26, 61, 124, 0.18) 50%, rgba(255, 255, 255, 0.5) 100%)';
 
               return (
                 <div
