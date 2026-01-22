@@ -210,7 +210,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50/85 relative z-10">
+        <section className="py-20 relative z-10" style={{
+          background: 'linear-gradient(to bottom, rgba(26, 61, 124, 0.15) 0%, rgba(255, 255, 255, 0.9) 100%)'
+        }}>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A3D7C] mb-4">
