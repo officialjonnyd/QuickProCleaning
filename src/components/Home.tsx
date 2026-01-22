@@ -176,33 +176,33 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <ShieldCheck className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-110 bg-[#1A3D7C] border-2 border-[#1A3D7C]">
+                <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ShieldCheck className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#1A3D7C] mb-2">Certified</h3>
-                <p className="text-sm text-gray-600">Professional protocols</p>
+                <h3 className="font-semibold text-white mb-2">Certified</h3>
+                <p className="text-sm text-white/80">Professional protocols</p>
               </div>
-              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-110 bg-[#7ABB00] border-2 border-[#7ABB00]">
+                <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#1A3D7C] mb-2">Flexible</h3>
-                <p className="text-sm text-gray-600">Scheduling available</p>
+                <h3 className="font-semibold text-white mb-2">Flexible</h3>
+                <p className="text-sm text-white/80">Scheduling available</p>
               </div>
-              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Leaf className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-110 bg-[#1A3D7C] border-2 border-[#1A3D7C]">
+                <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#1A3D7C] mb-2">Eco-Friendly</h3>
-                <p className="text-sm text-gray-600">Safe products</p>
+                <h3 className="font-semibold text-white mb-2">Eco-Friendly</h3>
+                <p className="text-sm text-white/80">Safe products</p>
               </div>
-              <div className="text-center p-6 glass-white rounded-2xl shadow-xl hover:shadow-2xl transition-all">
-                <div className="glass-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-[#7ABB00]" />
+              <div className="text-center p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-110 bg-[#7ABB00] border-2 border-[#7ABB00]">
+                <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#1A3D7C] mb-2">Trusted</h3>
-                <p className="text-sm text-gray-600">Reliable service</p>
+                <h3 className="font-semibold text-white mb-2">Trusted</h3>
+                <p className="text-sm text-white/80">Reliable service</p>
               </div>
             </div>
           </div>
