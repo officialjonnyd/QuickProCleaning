@@ -132,7 +132,7 @@ export default function Services() {
       </section>
 
       <section className="py-16 relative overflow-hidden" style={{
-        background: 'linear-gradient(to bottom, rgba(122, 187, 0, 0.3) 0%, rgba(26, 61, 124, 0.2) 40%, rgba(255, 255, 255, 1) 100%)'
+        background: 'linear-gradient(to bottom, rgba(26, 61, 124, 0.3) 0%, rgba(26, 61, 124, 0.15) 50%, rgba(255, 255, 255, 1) 100%)'
       }}>
         {/* Straight lines background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
