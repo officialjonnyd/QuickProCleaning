@@ -232,7 +232,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 style={{ objectFit: 'contain' }}
               />
               <p className="text-gray-400 text-sm">
-                Certified sanitation and disinfection services backed by professional commercial cleaning.
+                Professional sanitation and disinfection services backed by expert commercial cleaning.
               </p>
             </div>
 

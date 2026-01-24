@@ -136,7 +136,7 @@ export default function Contact() {
                 <ul className="space-y-2 text-sm text-white/90">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-[#7ABB00] rounded-full"></div>
-                    Certified sanitation specialists
+                    Professional sanitation specialists
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-[#7ABB00] rounded-full"></div>

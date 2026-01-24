@@ -10,7 +10,7 @@ export default function About() {
               About QuickPro Cleaning Solutions
             </h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              Certified professionals dedicated to protecting your people and spaces
+              Professional team dedicated to protecting your people and spaces
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                At QuickPro Cleaning Solutions Ltd, we combine commercial cleaning expertise with certified sanitation and disinfection services to protect your spaces and the people in them. We understand that cleanliness is more than appearance—it's about health, safety, and peace of mind.
+                At QuickPro Cleaning Solutions Ltd, we combine commercial cleaning expertise with professional sanitation and disinfection services to protect your spaces and the people in them. We understand that cleanliness is more than appearance—it's about health, safety, and peace of mind.
               </p>
             </div>
 
@@ -49,8 +49,8 @@ export default function About() {
                 </div>
                 <div>
                   <Award className="w-12 h-12 mx-auto mb-4 text-[#7ABB00]" />
-                  <h3 className="text-2xl font-bold mb-2">Certified</h3>
-                  <p className="text-gray-700">Professional standards and protocols</p>
+                  <h3 className="text-2xl font-bold mb-2">Professional</h3>
+                  <p className="text-gray-700">Industry standards and protocols</p>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function About() {
                   <ShieldCheck className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1A3D7C] mb-3">
-                  Certified Disinfection Protocols
+                  Professional Disinfection Protocols
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   We follow hospital-grade disinfection standards to ensure the highest level of cleanliness and safety for your facility. Our team is trained in the latest sanitization techniques.
@@ -132,7 +132,7 @@ export default function About() {
               Professional Certification
             </h2>
             <p className="text-lg text-gray-700 text-center mb-12 max-w-2xl mx-auto">
-              Our owner is certified by the International Association of Professions Career College as a Cleaning Business Owner, demonstrating our commitment to professional excellence and industry best practices.
+              Our owner trained with the International Association of Professions Career College as a Cleaning Business Owner, demonstrating our commitment to professional excellence and industry best practices.
             </p>
 
             <div className="glass-white p-8 rounded-2xl shadow-2xl border-2 border-[#7ABB00]/30">
@@ -142,7 +142,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#1A3D7C] mb-2">
-                    Certified Cleaning Business Owner
+                    Cleaning Business Owner
                   </h3>
                   <p className="text-gray-700 mb-4">
                     International Association of Professions Career College • December 2025
@@ -153,7 +153,7 @@ export default function About() {
               <div className="glass-white rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/certification_bilal_png.png"
-                  alt="Certified Cleaning Business Owner - Bilal El Nazer"
+                  alt="Cleaning Business Owner - Bilal El Nazer"
                   className="w-full h-auto"
                 />
               </div>
@@ -185,7 +185,7 @@ export default function About() {
                 <div className="w-12 h-12 bg-[#7ABB00] rounded-full flex items-center justify-center">
                   <Award className="w-6 h-6" />
                 </div>
-                <span>Certified</span>
+                <span>Professional</span>
               </div>
             </div>
             <p className="mt-8 text-lg text-gray-200 leading-relaxed">

@@ -106,7 +106,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 glass-green text-[#7ABB00] font-bold px-4 py-2 rounded-full text-sm mb-6 shadow-lg">
               <Award className="w-4 h-4" />
-              CERTIFIED & RELIABLE
+              RELIABLE & PROFESSIONAL
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-2xl">
@@ -136,7 +136,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[#7ABB00]" />
-                <span>Certified</span>
+                <span>Professional</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[#7ABB00]" />
@@ -182,8 +182,8 @@ export default function Home() {
                 <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShieldCheck className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-white mb-2">Certified</h3>
-                <p className="text-sm text-white/80">Professional protocols</p>
+                <h3 className="font-semibold text-white mb-2">Professional</h3>
+                <p className="text-sm text-white/80">Trained protocols</p>
               </div>
               <div className="text-center p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-110 bg-[#7ABB00] border-2 border-[#7ABB00]">
                 <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
